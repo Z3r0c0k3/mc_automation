@@ -5,7 +5,7 @@
 위 GIT repo는 ZEROCOKE의 마크 서버 자동화 소프트웨어를 다루는 repo 입니다.
 이 repo에 올라오는 모든 소프트웨어는 MIT License가 적용됩니다.
 
-## uploader.py
+## uploader
 
 이 파이썬 스크립트는 마인크래프트 서버의 맵 데이터를 구글 드라이브에 자동으로 백업하는 프로그램입니다. 'world', 'world_nether', 'world_the_end' 폴더를 지정된 경로에서 찾아 구글 드라이브의 사용자가 원하는 폴더에 각 업로드 시간대를 기록해 압축하여 업로드합니다.
 
@@ -20,9 +20,9 @@
 1. 파이썬이 시스템에 설치되어 있어야 합니다. 파이썬 설치는 [Python 공식 웹사이트](https://www.python.org/downloads/)에서 할 수 있습니다.
 
 2. 필요한 파이썬 라이브러리를 설치합니다:
-   ```bash
-   pip install --upgrade google-api-python-client google-auth-httplib2 google-auth-oauthlib
-   ```
+    ```bash
+    pip install -r requirements.txt
+    ```
 
 ## 사용 방법
 
@@ -32,7 +32,7 @@
 
 3. 스크립트를 처음 실행할 때 구글 계정으로 로그인하고, 구글 드라이브에 접근 권한을 부여합니다. 이 과정에서 `token.json` 파일이 생성됩니다.
 
-4. 스크립트에 구글 드라이브의 자신이 올릴 폴더의 폴더 ID를 설정합니다.
+4. 스크립트에 구글 드라이브의 사용자가 원하는 폴더의 폴더 ID를 설정합니다.
 
 5. 스크립트를 실행하여 백업 프로세스를 시작합니다.
 
@@ -40,7 +40,7 @@
 
 - `server_path`: 마인크래프트 서버 데이터가 저장된 경로를 지정합니다.
 - `folders_to_backup`: 백업할 서버 폴더 이름을 지정합니다.
-- `folder_id`: 구글 드라이브의 '내 드라이브/GB MAP' 폴더 ID를 설정합니다.
+- `folder_id`: 구글 드라이브의 사용자가 원하는 폴더의 폴더 ID를 설정합니다.
 
 ## 주의사항
 
